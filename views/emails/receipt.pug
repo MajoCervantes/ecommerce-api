@@ -1,0 +1,9 @@
+extends base
+
+block emailContent
+    p Hi #{name}
+    p Your order was for a total of #{totalPrice}
+    p And the products you purchased are: 
+    ul 
+        each product in products
+            li Product: #{product.name} - Price #{product.price} 

@@ -6,6 +6,7 @@ const {
   getUserCart,
   updateProductCart,
   purchaseOrder,
+  getUserOrders,
 } = require('../controllers/orders.controller')
 
 // Middlewares
@@ -36,9 +37,9 @@ router.patch(
 // Remove product from cart
 
 // Create order
-
 router.post('/order', purchaseOrder)
 
 // Get user's orders
+router.get('/get-orders', getUserOrders)
 
 module.exports = { ordersRouter: router }
